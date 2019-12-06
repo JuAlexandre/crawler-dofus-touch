@@ -1,17 +1,13 @@
-const boxen = require('boxen');
-const chalk = require('chalk');
-
-const package = require('../package.json');
+const displayWelcomeBox = require('./displayWelcomeBox');
+const displaySelectLangage = require('./displaySelectLangage');
+const scrapingMounts = require('./scraping/mounts');
 
 (async () => {
-    const welcomeMessage = chalk.white('Welcome on');
-    const appName = chalk.green.bold('Dofus Touch Crawler');
-    const appVersion = chalk.gray(`v${package.version}`);
+    displayWelcomeBox();
 
-    const welcomeBox = boxen(
-        `${welcomeMessage} ${appName} - ${appVersion}`,
-        { padding: 1, borderStyle: 'round' },
-    )
+    const langage = await displaySelectLangage();
 
-    console.log(welcomeBox);
+    const dragoturkeys = await scrapingMounts(langage);
+
+    console.log(dragoturkeys);
 })();
