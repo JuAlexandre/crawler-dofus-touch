@@ -5,7 +5,11 @@
   "main": "./app/index.js",
   "repository": "https://github.com/JuAlexandre/crawler-dofus-touch",
   "homepage": "https://github.com/JuAlexandre/crawler-dofus-touch#readme",
-  "author": "Julien ALEXANDRE <julien.alexandre26@gmail.com>",
+  "bugs": {
+    "url" : "https://github.com/JuAlexandre/crawler-dofus-touch/issues",
+    "email" : "julien.alexandre26@gmail.com"
+  },
+  "author": "Julien ALEXANDRE",
   "license": "MIT",
   "private": true,
   "scripts": {
