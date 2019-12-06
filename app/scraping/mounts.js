@@ -10,6 +10,8 @@ const scrapingMounts = async langage => {
 
     await page.goto(URL, { waitUntil: 'networkidle2' });
 
+    await page.addScriptTag({ path: './app/utils/getImageUrl.js' });
+
     let results = await page.evaluate(() => {
         const dragoturkeys = [];
         let dragoturkeyId = 1;
@@ -19,7 +21,7 @@ const scrapingMounts = async langage => {
                 const dragoturkey = {
                     id: dragoturkeyId,
                     name: line.querySelector('td:nth-child(2) > span[class="ak-linker ak-widgetcreated"] > a').innerText,
-                    imageUrl: line.querySelector('div[class="ak-entitylook"]').getAttribute('style', 'background'),
+                    imageUrl: getImageUrl(line.querySelector('div[class="ak-entitylook"]').getAttribute('style', 'background')),
                     generation: parseInt(line.querySelector('td:nth-child(3)').innerText),
                 };
 
