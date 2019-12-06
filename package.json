@@ -1,0 +1,10 @@
+{
+  "name": "crawler-dofus-touch",
+  "version": "1.0.0",
+  "description": "Get data from Dofus Touch encyclopedia",
+  "main": "./app/index.js",
+  "repository": "https://github.com/JuAlexandre/crawler-dofus-touch",
+  "author": "Julien ALEXANDRE <julien.alexandre26@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
