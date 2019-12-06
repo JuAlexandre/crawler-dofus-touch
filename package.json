@@ -4,6 +4,7 @@
   "description": "Get data from Dofus Touch encyclopedia",
   "main": "./app/index.js",
   "repository": "https://github.com/JuAlexandre/crawler-dofus-touch",
+  "homepage": "https://github.com/JuAlexandre/crawler-dofus-touch#readme",
   "author": "Julien ALEXANDRE <julien.alexandre26@gmail.com>",
   "license": "MIT",
   "private": true,
