@@ -1,7 +1,7 @@
-const displayWelcomeBox = require('./displayWelcomeBox');
-const displaySelectLangage = require('./displaySelectLangage');
-const displaySelectOption = require('./displaySelectOption');
-const displayLoading = require('./displayLoading');
+const displayWelcomeBox = require('./viewing/displayWelcomeBox');
+const displaySelectLangage = require('./viewing/displaySelectLangage');
+const displaySelectOption = require('./viewing/displaySelectOption');
+const displayLoading = require('./viewing/displayLoading');
 const scrapingMounts = require('./scraping/mounts');
 
 (async () => {

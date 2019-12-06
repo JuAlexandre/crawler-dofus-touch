@@ -1,7 +1,7 @@
 const boxen = require('boxen');
 const chalk = require('chalk');
 
-const package = require('../package.json');
+const package = require('../../package.json');
 
 const displayWelcomeBox = () => {
     const welcomeMessage = chalk.white('Welcome on');
