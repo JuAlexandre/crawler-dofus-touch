@@ -7,6 +7,9 @@
   "author": "Julien ALEXANDRE <julien.alexandre26@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "start": "nodemon ./app/index.js"
+  },
   "dependencies": {
     "puppeteer": "^2.0.0",
     "request": "^2.88.0"
