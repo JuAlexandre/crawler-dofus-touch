@@ -18,6 +18,7 @@
   "dependencies": {
     "boxen": "^4.2.0",
     "chalk": "^3.0.0",
+    "ora": "^4.0.3",
     "prompts": "^2.3.0",
     "puppeteer": "^2.0.0",
     "request": "^2.88.0"
