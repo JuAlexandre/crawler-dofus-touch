@@ -1,9 +1,9 @@
 const puppeteer = require('puppeteer');
 
-const ENCYCLOPEDIA = require('../config/routes');
+const constants = require('../config/constants');
 
 const scrapingMounts = async langage => {
-    let URL = langage === 'FR' ? ENCYCLOPEDIA.MOUNTS.FR : ENCYCLOPEDIA.MOUNTS.EN;
+    let URL = langage === 'FR' ? constants.MOUNTS_URL.FR : constants.MOUNTS_URL.EN;
 
     let browser = await puppeteer.launch({ headless: false });
     let page = await browser.newPage();
