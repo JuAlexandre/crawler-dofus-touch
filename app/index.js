@@ -22,4 +22,6 @@ const scrapingMounts = require('./scraping/mounts');
             process.exit();
             break;
     }
+
+    debugger;
 })();
