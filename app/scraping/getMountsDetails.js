@@ -32,7 +32,7 @@ const getMountsDetails = async dragoturkeysWithoutDetails => {
         );
     }
 
-    await page.close();
+    await browser.close();
 
     return dragoturkeys;
 };
