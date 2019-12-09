@@ -1,3 +1,5 @@
+const clear = require('clear');
+
 const displayWelcomeBox = require('./viewing/displayWelcomeBox');
 const displayQuestions = require('./viewing/displayQuestions');
 const displayLoading = require('./viewing/displayLoading');
@@ -6,6 +8,8 @@ const setPictureSize = require('./utils/setPictureSize');
 const downloadMountsPictures = require('./utils/downloadMountsPictures');
 
 (async () => {
+    clear();
+    
     displayWelcomeBox();
     const userAnswers = await displayQuestions();
     const spinner = displayLoading();
