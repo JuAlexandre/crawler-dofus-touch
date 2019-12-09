@@ -26,7 +26,8 @@ const displayQuestions = async () => {
             message: 'Which size would you like? (in pixel)',
             min: 100,
             max: 600,
-        }
+            validate: value => (value < 100 || value > 600) ? 'Please choose a valid size' : true,
+        },
     ], { onCancel: () => false });
 
     return userAnswers;
