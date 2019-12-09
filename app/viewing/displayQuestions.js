@@ -27,7 +27,7 @@ const displayQuestions = async () => {
             min: 100,
             max: 600,
         }
-    ]);
+    ], { onCancel: () => false });
 
     return userAnswers;
 };
