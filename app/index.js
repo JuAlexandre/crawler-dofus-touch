@@ -9,7 +9,7 @@ const downloadMountsPictures = require('./utils/downloadMountsPictures');
 
 (async () => {
     clear();
-    
+
     displayWelcomeBox();
     const userAnswers = await displayQuestions();
     const spinner = displayLoading();
@@ -21,7 +21,7 @@ const downloadMountsPictures = require('./utils/downloadMountsPictures');
             
             dragoturkeys = await scrapingMounts(userAnswers.langage, 'list');
             dragoturkeys.forEach(async dragoturkey => {
-                dragoturkey.pictureUrl = await setPictureSize(dragoturkey.pictureUrl, userAnswers.pictureSize);
+                dragoturkey.pictureUrl = await setPictureSize(dragoturkey.pictureUrl);
                 const error = downloadMountsPictures(dragoturkey.pictureUrl, `./download/${dragoturkey.name}.png`);
                 if (error) {
                     errors.push(error);
