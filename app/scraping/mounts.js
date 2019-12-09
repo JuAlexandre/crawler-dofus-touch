@@ -1,21 +1,15 @@
-const puppeteer = require('puppeteer');
-
 const constants = require('../config/constants');
-const getBasicData = require('./getBasicData');
+const getMountsList = require('./getMountsList');
+const getMountsDetails = require('./getMountsDetails');
 
-const scrapingMounts = async langage => {
+const scrapingMounts = async (langage, researchType) => {
     let URL = langage === 'FR' ? constants.MOUNTS_URL.FR : constants.MOUNTS_URL.EN;
 
-    let browser = await puppeteer.launch({ headless: false });
-    let page = await browser.newPage();
+    const dragoturkeysWithoutDetails = await getMountsList(URL);
 
-    await page.goto(URL, { waitUntil: 'networkidle2' });
+    const dragoturkeys = researchType === 'all' ? await getMountsDetails(dragoturkeysWithoutDetails) : null ;
 
-    const data = await getBasicData(page);
-
-    await browser.close();
-
-    return data;
+    return dragoturkeys;
 };
 
 module.exports = scrapingMounts;

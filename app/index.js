@@ -13,8 +13,9 @@ const scrapingMounts = require('./scraping/mounts');
             // TODO: Start a function to download all pictures.
             break;
         case 'getAllDragoturkeysData':
-            const dragoturkeys = await scrapingMounts(userAnswers.langage);
+            const dragoturkeys = await scrapingMounts(userAnswers.langage, 'all');
             dragoturkeys ? spinner.succeed('Done!') : spinner.fail('An error has occurred...');
+            console.log(dragoturkeys);
             break;
         default:
             spinner.stop();
