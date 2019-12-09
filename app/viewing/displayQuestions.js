@@ -24,6 +24,8 @@ const displayQuestions = async () => {
             type: prev => prev === 'downloadDragoturkeysPictures' ? 'number' : null,
             name: 'picturesSize',
             message: 'Which size would you like? (in pixel)',
+            min: 100,
+            max: 600,
         }
     ]);
 
