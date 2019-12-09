@@ -7,7 +7,7 @@ const scrapingMounts = async (langage, researchType) => {
 
     const dragoturkeysWithoutDetails = await getMountsList(URL);
 
-    const dragoturkeys = researchType === 'all' ? await getMountsDetails(dragoturkeysWithoutDetails) : null ;
+    const dragoturkeys = researchType === 'all' ? await getMountsDetails(dragoturkeysWithoutDetails) : dragoturkeysWithoutDetails ;
 
     return dragoturkeys;
 };
